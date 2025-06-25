@@ -2,20 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Landing Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>📝 To-Do List</h1>
-    <div class="input-section">
-      <input type="text" id="task-input" placeholder="Enter a new task..." />
-      <button id="add-btn">Add</button>
-    </div>
-    <ul id="task-list"></ul>
-  </div>
 
-  <script src="script.js"></script>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">MyLogo</h1>
+      <nav class="nav" id="navbar">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to Our Website</h2>
+      <p>Build modern, responsive, and clean websites easily with us.</p>
+      <a href="#" class="cta-btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle for mobile nav
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    toggle.onclick = () => {
+      navbar.classList.toggle('active');
+    };
+  </script>
 </body>
 </html>
